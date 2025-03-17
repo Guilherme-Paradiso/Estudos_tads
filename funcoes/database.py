@@ -41,6 +41,16 @@ def create_user():
 
     return user_df
 
+#movie_df.to_sql("movie", conn, index=False, if_exists="replace")
+#user_df.to_sql("user", conn, index=False, if_exists="replace")
+#
+## Executar INNER JOIN
+#query_inner = """
+#SELECT movie.movie_id, movie.Movies, user.username
+#FROM customers
+#INNER JOIN orders ON movie.movie_id = user.movie_id
+#"""
+
 
 def create_reviews():
     # Criando os dados para a tabela de reviews (comentários e avaliações)
@@ -50,7 +60,7 @@ def create_reviews():
         'review_id': [1, 2, 3, 4, 5, 6, 7],
         'movie_id': [18259, 24179, 35346, 41342, 56786, 62084, 42423],
         'user_id': [123, 635, 657, 867, 967, 23, 396],
-        'comment': ['Excelente filme!', 'Maravilhoso', 'Muito engraçado', 'Tenso e assustador', 'Amei o enredo', 'Romântico e divertido', 'Documentário imperdível'],
+        'comment': ['Amazing movie!!!', 'Awesome', 'Very funny', 'medium', 'I loved the plot', 'Romantic and fun', 'Unmissable documentary'],
         'rating': [5, 4, 5, 4, 5, 4, 5]  # Notas de 1 a 5
 
 
